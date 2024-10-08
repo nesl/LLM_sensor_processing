@@ -35,7 +35,7 @@ docker exec -it my-container /bin/bash
 or 
 ```
 docker exec -it my-container2 python cli.py --mode api \
-        --query ecg_data-noise --openai gpt-4 \
+        --query ecg_data-powerline_2 --openai gpt-4 \
         --index 1 --num_trial 1
 ```
 ### Set up OpenAI key
@@ -55,10 +55,10 @@ Download the benchmark used in the paper and unzip it in the main folder from [h
 (Optional) To access the full benchmark, you can view it from [here](https://drive.google.com/file/d/1gVE8_MEk0ZU9ZcspZPhLlO5_L_NQy2Mf/view?usp=sharing).
 
 ### Run the code:
-Try out denoising the powerline noise from the ECG:
+Try out denoising the powerline noise from the ECG data sample #1:
 ```
 python cli.py --mode api \
-        --query ecg_data-noise --openai gpt-4 \
+        --query ecg_data-powerline_2 --openai gpt-4o \
         --index 1 --num_trial 1
 ```
 
@@ -89,14 +89,14 @@ python cli.py --mode api \
 2. --model: Choose between ('gpt-3.5-turbo', 'gpt-4', 'gpt-4o', 'gpt-4-0125-preview', \
         'gpt-4-turbo', 
         'Llama-2-70b', 'Llama-2-13b', 'Llama-2-7b', 'Llama-3-8b', 'Llama-3-70b', \
-        'Qwen1.5-110B', 'Qwen2-72B). To use models from [together.ai](https://https://www.together.ai/pricing), you will need to specify your Together.ai key in together_key.txt.
+        'Qwen1.5-110B', 'Qwen2-72B). To use models from [together.ai](https://https://www.together.ai/pricing)(not gpt-X models from OpenAI), you will need to specify your Together.ai key in together_key.txt.
 ```
 --model gpt-4
 ```
 3. --query: The type of signal processing problem you want to solve. These includes: 
 ecg_data-extrapolation, ecg_data-gaussian, ecg_data-heartrate, ecg_data-imputation, ecg_data-motion, ecg_data-powerline_1, ecg_data-powerline_2, ecg_data-powerline_3,  gait-delay_detection, gait-period_detection, ppg-extrapolation, 
 ppg-imputation, resampling, speech-echo, speech-Siren, speech-TelephoneRing1, 
-speech-TelephoneRing2, speech-TelephoneRing3, synthesis_1, synthesis_2, synthesis_3, synthesis_4, synthesis_5, synthesis_6, synthesis_7, synthesis_8
+speech-TelephoneRing2, speech-TelephoneRing3, change_point_detect_1, change_point_detect_2, change_point_detect_3, change_point_detect_4, outlier_detect_1, outlier_detect_2, outlier_detect_3, outlier_detect_4
 ```
 --query filtering_ring
 ``` 
