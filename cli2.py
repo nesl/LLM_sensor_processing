@@ -101,7 +101,7 @@ def main(args):
                                     length=args.ts_len, mode=args.mode, args=args)
                 # chat_openai_io_text(openai_key, system_prompt.system_prompt, global_dict, local_dict, model=model, temperature=0.8, top_p=1, args=args)
                 Agent_based_on_text(openai_key, system_prompt.system_prompt, global_dict, local_dict, model=model, temperature=0.8, top_p=1, args=args)
-            elif args.mode in ('api', 'no_api', 'CoT', 'api_react', 'base', 'api_2', 'api_filter'):
+            elif args.mode in ('api', 'no_api', 'CoT', 'base'):
                 system_prompt = SystemPrompt(imu_file = args.imu_file, 
                                             geo_file=args.geo_file, input_file=args.input_file, system_prompt_file=args.system_prompt_file, args=args)
                 Agent_with_reflection(openai_key, system_prompt.system_prompt, global_dict, local_dict, model=model, temperature=args.temperature, top_p=args.top_p, args=args)
@@ -185,7 +185,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--eval",
-        type=str, default='env', help="""
+        type=str, default='self_coding', help="""
         Feedback from the environment or self-generated. (env | self_vis | self_coding | self_verifier)
         """
     )

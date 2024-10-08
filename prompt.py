@@ -133,53 +133,6 @@ Here is the previous trial information:
 Now, start your evaluation step by step:
 """
 
-# eval_prompt_coding = """
-# You are a challenger that can perform evaluation on a signal processing plan. \
-# You are tasked with another text-based signal processing AI who handles signal processing queries by planing and coding.\
-# Your job is to challenge the answer by proposing challenge hypothesis on a ressolved problem and use Python to verify if the hypothesis is true.\
-# You will be given the previous signal processing trial as context and the query from user.
-
-# You have access to the following libraries:
-
-# (1) numpy: Numpy provides mathematical operations on signals, such as array manipulation Fourier transforms, statistical analysis.
-# (2) scipy: Scipy is generally useful for filter design, signal transformation, and signal analysis. You can use the libraries from ```scipy.signal``` for filter design. SciPy also provides tools for analyzing signals, including functions to compute the autocorrelation, power spectral density, cross-correlation, and coherence.
-# (3) pandas: Pandas is useful for time series data manipulation and analysis. For example, you can use ```pandas.Series``` to compute rolling mean or standard deviation.
-
-# [important] Evaluation protocal:
-# - Do it in three step in the following format. After the [ANALYSIS] step, pause your generation and wait for the results.
-# - [HYPOTHESIS]: First state hypothesis if the query is resolved; For example, you can challenge if the parameter selection is reasonable.
-# - [ANALYSIS]: Based on your hypothesis, only implement the challenger function to verify if it is true. Use data provided by the user and the output data produced by the AI agent through challenger API.
-#     i) Remember, you are a language model. Do not directly plot signals and inspect them or hear audios.
-#     ii) Implement your function challenger inside ```Python ``` code block. Do not write code outside the challenger function. The function prototype is as follows:
-
-# ```Python 
-# def challenger(input_data, output_data, sampling_rate=None):
-#     # HERE is where you put your challenge code
-#     # Args:
-#     #   input_data: The data type is numpy.ndarray. The variable is provided through the function interface for you. This is the data provided by the user to perform DSP. 
-#     #   output_data: The data type is numpy.ndarray. The variable is provided through the function interface for you. This is the data processed by the other AI agent. 
-#     #   sampling_rate: The sampling rate of the data. sampling_rate is mandatory for speech, ecg, ppg, and gait data. It could be optional for others.
-#     # Return: boolean variable - True or False. If your the result does not pass your test, output False. Else, output True.
-
-#     # Do not reproduce the output_data. Instead, you should check if the output_data satisfy some properties.
-#     # For example, for change point detection, you should check if the output points indeed segment the two chunks.
-#  ```
-#     iii) Please note that variables input_data, output_data, and sampling_rate is accessible through the function interface. 
-#     iv) You just need to implement the challenger function. Do not write code outside the challenger function.
-#     v) We will run the challegner function and bring the results for you.
-
-# - [EVALUATION]: Based on the results, describe your evaluation after the tag [EVALUATION] and the iteration will stop.
-
-# The iteration will stop once you use the keyword [EVALUATION].
-
-# Here is the previous trial information:
-# [Relevant CONTEXT STARTS]: {context} [CONTEXT ENDS.]
-# [Question]: {question}
-# [Memory]: {memory}
-
-# Now, start your evaluation step by step:
-# """
-
 verifier_prompt = """
 You are a verifier that can perform evaluation on a signal processing plan. \
 You are tasked with another text-based signal processing AI who handles signal processing queries by planing and coding.\

@@ -1,7 +1,7 @@
 import pdb 
 import numpy as np 
 import pandas as pd 
-from sys_prompt import api, api_2, no_api, text, react, api_filter, base, CoT
+from sys_prompt import api, no_api, text, react, base, CoT
 from utils import read_data
 
 def encode_number(args, ECG_str, ecg_data):
