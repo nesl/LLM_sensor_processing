@@ -2,9 +2,11 @@
 Code to reproduce results in our paper: SensorBench: Benchmarking LLMs in Coding-Based Sensor Processing
 
 ![Benchmark composition](images/pie_chart.png)
+
 **Benchmark composition**
 
 ![Benchmark composition](images/algo_bd-Overview.drawio.png)
+
 **We envision an intelligent assistant to support users, making advanced sensor data analysis accessible to a much broader audience.**
 
 ## Setup
@@ -58,12 +60,19 @@ python cli2.py --mode api \
 ```
 --mode api
 ```
+
 *--mode* options:
+
         1.1 text: Feeding LLMs with signals in numerical form
+
         1.2 api: Python conding environment + API access + inspection + ReACT prompting 
+
         1.3 no_api: Python conding environment + inspection + ReACT prompting 
+
         1.4 CoT:  Python conding environment + Chain of Thought prompting
+
         1.5 ReAct: Python conding environment + ReAct prompting
+        
         1.6 Base: Provide LLMs with Python conding environment only
 
 
