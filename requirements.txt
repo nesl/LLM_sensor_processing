@@ -1,0 +1,15 @@
+openai==0.27.7
+transformers
+accelerate
+evaluate
+deepspeed
+tqdm
+datasets
+together
+func_timeout
+pandas
+scipy==1.12.0
+librosa
+peft
+pmdarima
+mir_eval
