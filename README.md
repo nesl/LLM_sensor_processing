@@ -110,7 +110,7 @@ speech-TelephoneRing2, speech-TelephoneRing3, change_point_detect_1, change_poin
 ```
 
 # Plug in your sensor data and query
-TODOs
+- [ ] DOTOs
 
 # Plug in your own prompts
 In *sys_prompt.py*, we define the prompting strategies. We suggest your add or modify prompts in the file to build your own agents.
