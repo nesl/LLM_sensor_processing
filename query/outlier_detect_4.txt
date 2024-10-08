@@ -1,0 +1,1 @@
+In a manufacturing plant with multiple motors and transformers operating machinery, I collected the current drawn by the transformers, with 500 Hz sampling rate. Detect all of the positions of the outliers in the setting. Do not give me the anomalous values, give me the positions in the time series.

@@ -1,0 +1,1 @@
+I have an ECG time series sampled at 500 Hz. Can you calculate the heart beat per minute (bpm) base on the ECG? Please calculate and return the bpm only.

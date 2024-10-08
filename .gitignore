@@ -7,12 +7,13 @@ __pycache__/
 *.so
 
 benchmark/
-query/
+# query/
 llm_response/*
 conv_history/*
 
 key.txt
 together_key.txt
+*.tar.gz
 
 # Distribution / packaging
 .Python

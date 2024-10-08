@@ -1,0 +1,1 @@
+The provided file is a perssure sensor measurement of a foot while I am walking. The sampling rate is 300 Hz. Can you estimate the average period of a step? The data is in an numpy.ndarray. The data is a 1-D np.array. The output should be a single scalar of period in np.ndarray.

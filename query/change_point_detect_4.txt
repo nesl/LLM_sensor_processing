@@ -1,0 +1,1 @@
+I have a 1-D time series with changing distribution. Can you detect the change positions? Do not give me the changing values, give me the positions in the array.

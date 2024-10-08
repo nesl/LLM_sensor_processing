@@ -1,0 +1,1 @@
+I have an ECG time series sampled at 500 Hz. The ECG time series has baseline drift due to motion artifact. Can you filter out the effect of movement artifact?

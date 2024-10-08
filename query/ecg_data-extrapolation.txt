@@ -1,0 +1,1 @@
+It is an ECG sequence (unit in Microvolts). The sampling rate is 50 Hz. Please predict the next 50 values from the sequence.

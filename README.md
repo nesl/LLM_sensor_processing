@@ -34,9 +34,9 @@ docker exec -it my-container /bin/bash
 ```
 or 
 ```
-docker exec -it my-container2 python cli2.py --mode api \
-        --query TelephoneRing2 --openai gpt-4 \
-        --input_file ./benchmark/speech-TelephoneRing2/1.wav
+docker exec -it my-container2 python cli.py --mode api \
+        --query ecg_data-noise --openai gpt-4 \
+        --index 1 --num_trial 1
 ```
 ### Set up OpenAI key
 1.3 Put your openai token into key.txt
@@ -48,6 +48,11 @@ echo "YOUR_OPENAI_TOKEN" >> key.txt
 ```
 echo "YOUR_TOGETHER_AI_TOKEN" >> together_key.txt
 ```
+
+### Prepare Benchmark
+Download the benchmark used in the paper and unzip it in the main folder from ![here](https://drive.google.com/file/d/1a6M2MOHWu1JQL5cb9BMicT-J7vbqWnRg/view?usp=sharing).
+
+(Optional) To access the full benchmark, you can view it from ![here](https://drive.google.com/file/d/1gVE8_MEk0ZU9ZcspZPhLlO5_L_NQy2Mf/view?usp=sharing).
 
 ### Run the code:
 Try out denoising the powerline noise from the ECG:
@@ -104,3 +109,8 @@ speech-TelephoneRing2, speech-TelephoneRing3, synthesis_1, synthesis_2, synthesi
 --num_trial 5
 ```
 
+## Plug in your sensor data and query
+TODOs
+
+## Modify the prompts
+In *sys_prompt.py*, we define the prompting strategies. We suggest your add or modify prompts in the file to build your own agents.

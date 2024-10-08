@@ -1,0 +1,1 @@
+The provided files are two perssure sensor measurement of left foot and the right foot while I am walking. The sampling rate is 300 Hz. What's the temporal delay of the left step to the right step? The data is in an numpy.ndarray. The two data are stacked along the 0-th axis of the array. The output should be a scalar of delay in np.ndarray.

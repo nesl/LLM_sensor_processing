@@ -1,0 +1,1 @@
+I have an ECG time series sampled at 500 Hz. The ECG time series is corrupted by Gaussian noise. Can you filter out the noise?

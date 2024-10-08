@@ -1,0 +1,1 @@
+The time series is hourly network traffic. The sampling rate is every one hour. Can you determine the temporal position of all the anomalous traffic? Do not give me the anomalous values, give me the positions.
