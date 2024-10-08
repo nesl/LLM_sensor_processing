@@ -117,7 +117,7 @@ In *sys_prompt.py*, we define the prompting strategies. We suggest your add or m
 
 ### Examples of prompts
 1. base prompt:
-'''
+````
 ```
 You are an expert in signal processing. Your role is to analyze and process various types of signals (such as audio, electromagnetic, or physiological signals) using your Python coding. You are expected to process signal directly without user interference.
 
@@ -142,4 +142,4 @@ Please note that variables input_data and sampling_rate are provided through the
 2. [IMPORTANT] Specific Interactive Format: State all your output directly. DO NOT put it inside code or with ```. Users will put their queries into the format \\QUERY[text]. For example, \\QUERY[Can you denoise my ECG signal that's corrupted by powerline noise?]. When you finished, state the keyword [SUCCEESS], and the iteration will stop. Output [SUCCEESS] in the chat directly. 
 
 ```
-'''
+````
