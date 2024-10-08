@@ -34,14 +34,19 @@ def main(args):
         'Llama-2-70b', 'Llama-2-13b', 'Llama-2-7b', 'Llama-3-8b', 'Llama-3-70b', \
         'Qwen1.5-110B', 'Qwen2-72B')
     
+    prefix = ''
     if 'Llama' in args.openai:
-        args.openai = 'meta-llama/' + args.openai + '-chat-hf'
+        prefix = 'meta-llama/'
+        args.openai = prefix + args.openai + '-chat-hf'
     elif 'Qwen1.5' in args.openai:
-        args.openai = 'Qwen/' + args.openai + '-Chat'
+        prefix = 'Qwen/'
+        args.openai = prefix + args.openai + '-Chat'
     elif 'Qwen2' in args.openai:
-        args.openai = 'Qwen/' + args.openai + '-Instruct'
+        prefix = 'Qwen/'
+        args.openai = prefix + args.openai + '-Instruct'
     elif 'Mixtral' in args.openai:
-        args.openai = 'mistralai/' + args.openai + '-Instruct-v0.1'
+        prefix = 'mistralai/'
+        args.openai = prefix + args.openai + '-Instruct-v0.1'
 
     if 'ecg' in args.input_file[0]:
         args.file = 'ecg_data'
@@ -64,6 +69,8 @@ def main(args):
     # handle output file formating
     output_dir = './llm_response/'
     args.output_file = output_dir + f'{args.openai}_{args.query}_{args.index}_{args.num_trial}.' + filename.split('.')[-1]
+    if not os.path.exists(output_dir + prefix):
+        os.makedirs(output_dir + prefix)
 
     if 'VoiceDetector' in args.input_file[0]:
         args.output_file = output_dir + f'{args.openai}_{args.query}_{args.index}_{args.num_trial}.' + 'npy'

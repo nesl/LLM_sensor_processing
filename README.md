@@ -43,6 +43,11 @@ docker exec -it my-container2 python cli2.py --mode api \
 ```
 echo "YOUR_OPENAI_TOKEN" >> key.txt
 ```
+### (Optional) Set up together.ai key
+1.4 Put your together.ai token into together_key.txt
+```
+echo "YOUR_TOGETHER_AI_TOKEN" >> together_key.txt
+```
 
 ### Run the code:
 Try out denoising the powerline noise from the ECG:
@@ -55,7 +60,7 @@ python cli2.py --mode api \
 ## Explanations of arguments:
 1. --mode: Choose between text, no_api, and api. It allows users to specify how LLMs interact with data directly through text, writing their own code, or calling upon APIs.
 
-*mode* \in {text, api, no_api, CoT, api_react, base}
+*mode* \in {'text', 'api', 'no_api', 'CoT', 'api_react', 'base'}
 
 ```
 --mode api
@@ -72,11 +77,14 @@ python cli2.py --mode api \
         1.4 CoT:  Python conding environment + Chain of Thought prompting
 
         1.5 ReAct: Python conding environment + ReAct prompting
-        
-        1.6 Base: Provide LLMs with Python conding environment only
+
+        1.6 Base: Python conding environment
 
 
-2. --model: Choose between (gpt-3.5-turbo, gpt-4, llama-2-70b, llama-2-13b, llama-2-7b). To use Llama-2, you will need to specify your Together.ai key in together_key.txt.
+2. --model: Choose between ('gpt-3.5-turbo', 'gpt-4', 'gpt-4o', 'gpt-4-0125-preview', \
+        'gpt-4-turbo', 
+        'Llama-2-70b', 'Llama-2-13b', 'Llama-2-7b', 'Llama-3-8b', 'Llama-3-70b', \
+        'Qwen1.5-110B', 'Qwen2-72B). To use models from [together.ai](https://https://www.together.ai/pricing), you will need to specify your Together.ai key in together_key.txt.
 ```
 --model gpt-4
 ```
