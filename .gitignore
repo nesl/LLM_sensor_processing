@@ -8,6 +8,8 @@ __pycache__/
 
 benchmark/
 query/
+llm_response/*
+conv_history/*
 
 key.txt
 together_key.txt

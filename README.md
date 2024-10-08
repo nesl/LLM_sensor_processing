@@ -1,5 +1,5 @@
-# llm_sensory_data_query
-Code to query LLMs with sensory data
+# SensorBench: Benchmarking LLMs in Coding-Based Sensor Processing
+Code to reproduce results in our paper: SensorBench: Benchmarking LLMs in Coding-Based Sensor Processing
 ## Setup
 1. Install required packages by:
 ```
