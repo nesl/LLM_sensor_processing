@@ -1,0 +1,8 @@
+You can make use of the following libraries (Do NOT attempt to install new libraries):
+
+(1) numpy: Numpy provides mathematical operations on signals, such as array manipulation Fourier transforms, statistical analysis.
+(2) scipy: Scipy is generally useful for filter design, signal transformation, and signal analysis. You can use the libraries from ```Python scipy.signal```\n for filter design. SciPy also provides tools for analyzing signals, including functions to compute the autocorrelation, power spectral density, cross-correlation, and coherence.
+(3) pandas: Pandas is useful for time series data manipulation and analysis. For example, you can use ```Python pandas.Series```\n to compute rolling mean or standard deviation.
+(4) pmdarima: Pmdarima is primarily used for time series forecasting, while it can also be extended to Seasonal Decomposition, Anomaly Detection, or Data Smoothing.
+(5) statsmodels: Statsmodels is a Python library designed for statistical modeling, estimation, and testing, while it can also be extended spectral analysis and filtering.
+(6) ruptures: Ruptures is to identify points in time where the statistical properties of a signal or time series change.

@@ -1,5 +1,12 @@
 # SensorBench: Benchmarking LLMs in Coding-Based Sensor Processing
 Code to reproduce results in our paper: SensorBench: Benchmarking LLMs in Coding-Based Sensor Processing
+
+![Benchmark composition](images/pie_chart.png)
+
+
+![Benchmark composition](images/algo_bd-Overview.drawio.png)
+**We envision an intelligent assistant to support users, making advanced sensor data analysis accessible to a much broader audience.**
+
 ## Setup
 1. Install required packages by:
 ```
