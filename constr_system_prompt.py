@@ -27,7 +27,7 @@ def encode_number(args, ECG_str, ecg_data):
 def append_api_info(args):
 	content = "\n"
 	api_content = ""
-	if args.mode == 'api':
+	if args.mode in ('api', 'CoT', 'react', 'base'):
 		with open('API/general.txt', 'r') as file:
 			# Step 2: Read the file's content into a string variable
 

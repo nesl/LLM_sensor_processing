@@ -52,15 +52,15 @@ echo "YOUR_TOGETHER_AI_TOKEN" >> together_key.txt
 ### Run the code:
 Try out denoising the powerline noise from the ECG:
 ```
-python cli2.py --mode api \
-        --query powerline_2 --openai gpt-4 \
-        --input_file ./benchmark/ecg_data-powerline_2/1.npy
+python cli.py --mode api \
+        --query ecg_data-noise --openai gpt-4 \
+        --index 1 --num_trial 1
 ```
 
 ## Explanations of arguments:
 1. --mode: Choose between text, no_api, and api. It allows users to specify how LLMs interact with data directly through text, writing their own code, or calling upon APIs.
 
-*mode* \in {'text', 'api', 'no_api', 'CoT', 'api_react', 'base'}
+*mode* \in {'text', 'api', 'no_api', 'CoT', 'react', 'base'}
 
 ```
 --mode api
@@ -74,11 +74,11 @@ python cli2.py --mode api \
 
         1.3 no_api: Python conding environment + inspection + ReACT prompting 
 
-        1.4 CoT:  Python conding environment + Chain of Thought prompting
+        1.4 CoT:  Python conding environment + API access + Chain of Thought prompting
 
-        1.5 ReAct: Python conding environment + ReAct prompting
+        1.5 ReAct: Python conding environment + API access + ReAct prompting
 
-        1.6 Base: Python conding environment
+        1.6 Base: Python conding environment + API access
 
 
 2. --model: Choose between ('gpt-3.5-turbo', 'gpt-4', 'gpt-4o', 'gpt-4-0125-preview', \
@@ -88,7 +88,10 @@ python cli2.py --mode api \
 ```
 --model gpt-4
 ```
-3. --query: The type of signal processing problem you want to solve. These includes: extrapolation, imputation, filtering_motion, filtering_gaussian, filtering_powerline, outlier_detection, filtering_echo, filtering_ring, filtering_siren, change_point_detection, delay_detection, period_detection
+3. --query: The type of signal processing problem you want to solve. These includes: 
+ecg_data-extrapolation, ecg_data-gaussian, ecg_data-heartrate, ecg_data-imputation, ecg_data-motion, ecg_data-powerline_1, ecg_data-powerline_2, ecg_data-powerline_3,  gait-delay_detection, gait-period_detection, ppg-extrapolation, 
+ppg-imputation, resampling, speech-echo, speech-Siren, speech-TelephoneRing1, 
+speech-TelephoneRing2, speech-TelephoneRing3, synthesis_1, synthesis_2, synthesis_3, synthesis_4, synthesis_5, synthesis_6, synthesis_7, synthesis_8
 ```
 --query filtering_ring
 ``` 

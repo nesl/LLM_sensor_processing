@@ -108,7 +108,7 @@ def main(args):
                                     length=args.ts_len, mode=args.mode, args=args)
                 # chat_openai_io_text(openai_key, system_prompt.system_prompt, global_dict, local_dict, model=model, temperature=0.8, top_p=1, args=args)
                 Agent_based_on_text(openai_key, system_prompt.system_prompt, global_dict, local_dict, model=model, temperature=0.8, top_p=1, args=args)
-            elif args.mode in ('api', 'no_api', 'CoT', 'base'):
+            elif args.mode in ('api', 'no_api', 'CoT', 'react', 'base'):
                 system_prompt = SystemPrompt(imu_file = args.imu_file, 
                                             geo_file=args.geo_file, input_file=args.input_file, system_prompt_file=args.system_prompt_file, args=args)
                 Agent_with_reflection(openai_key, system_prompt.system_prompt, global_dict, local_dict, model=model, temperature=args.temperature, top_p=args.top_p, args=args)

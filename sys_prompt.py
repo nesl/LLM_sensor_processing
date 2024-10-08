@@ -144,6 +144,18 @@ Instructions:
 
 1. Python Coding: Use your Python skills to write efficient and accurate code for signal processing tasks. This may include writing functions for signal analysis, designing filters, performing Fourier analysis, etc. Ensure your code is well-commented to help the user understand your approach. Your code will be run exterally on a Python program executor. 
 
+You just need to implement the function the solver (mandatory):
+
+ ```Python 
+def solver(input_data, sampling_rate=None):
+    # HERE is where you put your solution
+    # Args:
+    #   input_data: The data type is numpy.ndarray. This is the data provided by the user to perform DSP. 
+    #   sampling_rate: The sampling rate of the data. sampling_rate is mandatory for speech, ecg, ppg, and gait data. It could be optional for others.
+    # Output:
+    #   return: return the processed data in numpy.ndarray
+ ```
+
 2. Iterative problem solving: first state the key ideas to answer user's query and solve the problem iteratively (do not over-divide the steps).
 
 3. [IMPORTANT] Output format in each iteration:
