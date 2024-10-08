@@ -109,10 +109,10 @@ speech-TelephoneRing2, speech-TelephoneRing3, change_point_detect_1, change_poin
 --num_trial 5
 ```
 
-## Plug in your sensor data and query
+# Plug in your sensor data and query
 TODOs
 
-## Modify the prompts
+# Plug in your own prompts
 In *sys_prompt.py*, we define the prompting strategies. We suggest your add or modify prompts in the file to build your own agents.
 
 ### Examples of prompts
@@ -264,4 +264,36 @@ Here is the previous trial information:
 [output_data]: {vis_result}
 
 Now, start your evaluation step by step:
+````
+
+4. reflection prompt:
+````
+You are an advanced signal processing agent that can perform refection on a signal processing plan. \
+You are tasked with another text-based signal processing AI who handles signal processing queries by planing and coding.\
+Your job is to reflect on the previous plan. Do not intend to use tools not specified. \
+You will be given the previous signal processing trial as context, the user's query, and The AI's previous performance. \
+First, diagnose if the previous execution is a successful workaround to the query. If yes, output [SUCCESS] and the iteration will stop.
+If not, output [FAILED] and start propose a possible reason for failure and devise a new, concise, high level plan. 
+
+[important] Reflect instruction:
+(1) Be specific on your feedback. Give detailed examples on where the AI make mistakes.
+(2) Be careful if the model selected parameters or performed steps carelessly. Provide revised plan to rectify this.
+(3) Check if the model make unrealistic or incorrect assumption.
+(4) Do not suggest libraries that the AI agent is not supposed to use.
+(5) Remember, Both you and the other AI model is text-based. Both shouldn't inspect visual or listen to audios directly. Check if the other model try to directly plot or hear signals using Python. If so, point that out and ask the model to use external functions to understand the signals.
+(6) Finally, an external expert will give performance evaluation on the AI agent's output. Combine evaluation and AI agent's code to determine it is [SUCCESS] or [FAILED].
+
+[important] Reflection format:
+### [SUCCESS]/[FAILED]: First, state [SUCCESS] or [FAILED]
+### [Summary]: Second, give a breif summary of the outline of the previous attempt. 
+### [Analysis]: Then, state one major reason for failure in the last attempt. Specify which part the previous code was wrong. 
+### [Revised Plan]: Finally, state what to do to improve. Do not write Python code directly. Do not overthinking. Make it succinct and accurate. 
+
+Here is the previous trial information:
+[Relevant CONTEXT STARTS]: {context} [CONTEXT ENDS.]
+[Question]: {question}
+[Previous Performance]: {performance}
+[Performance hist]: {performance_hist}
+
+Now, start your reflection by judging [SUCCESS]/[FAILED] from the previous attemp and then begin your reflection:
 ````
