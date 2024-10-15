@@ -1,5 +1,5 @@
 # SensorBench: Benchmarking LLMs in Coding-Based Sensor Processing
-Code to reproduce results in our paper: SensorBench: Benchmarking LLMs in Coding-Based Sensor Processing
+Code to reproduce results in our paper: [SensorBench: Benchmarking LLMs in Coding-Based Sensor Processing](https://arxiv.org/pdf/2410.10741)
 
 ![Benchmark composition](images/pie_chart.png)
 
