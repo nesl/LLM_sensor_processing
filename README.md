@@ -297,3 +297,10 @@ Here is the previous trial information:
 
 Now, start your reflection by judging [SUCCESS]/[FAILED] from the previous attemp and then begin your reflection:
 ````
+
+# Acknowledgement
+
+The research reported in this paper was sponsored in part by: the Air Force Office of Scientific Research under Cooperative Agreement #FA95502210193; the DEVCOM Army Research Laboratory under Cooperative Agreement #W911NF-17-2-0196; the National Science Foundation under Award #CNS-2325956, and, the National Institutes
+of Health under Award #1P41EB028242.  Any findings in this material are those of the author(s) and do not reflect the views of any of the above funding agencies. The U.S. Government is authorized to reproduce and distribute reprints for Government purposes notwithstanding any copyright notation here on. 
+
+We'd also like to thank OpenAI for their generous support through the OpenAI Researcher Access Program.
