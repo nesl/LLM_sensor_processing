@@ -58,7 +58,8 @@ def load_data(file_path):
 
 def compute_mse_from_target(args, input_array):
 
-    if 'synthesis' in args.target_file:
+    if 'change_point_detect' in args.target_file \
+            or 'outlier_detect' in args.target_file:
         # do F1 score instead
         array1 = np.int64(input_array)
         array2 = np.load(args.target_file, allow_pickle=True)
@@ -159,7 +160,8 @@ def compute_mse(file_path1, file_path2, args=None):
         )
 
         mse = mse[0]
-    elif 'synthesis' in file_path2:
+    elif 'change_point_detect' in file_path2 \
+            or 'outlier_detect' in file_path2:
         if array1.dtype.kind in 'fc':
             return np.inf
 
