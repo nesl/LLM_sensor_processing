@@ -10,8 +10,8 @@ Code to reproduce results in our paper: [SensorBench: Benchmarking LLMs in Codin
 **We envision an intelligent assistant to support users, making advanced sensor data analysis accessible to a much broader audience.**
 
 # Table of Contents
-1. [Introduction](https://github.com/nesl/LLM_sensor_processing?tab=readme-ov-file#setup)
-2. [Installation](https://github.com/nesl/LLM_sensor_processing?tab=readme-ov-file#setup)
+1. [Introduction](#setup)
+2. [Installation](#setup)
 
 ## Setup
 1. Install required packages by:
