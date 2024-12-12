@@ -9,6 +9,10 @@ Code to reproduce results in our paper: [SensorBench: Benchmarking LLMs in Codin
 
 **We envision an intelligent assistant to support users, making advanced sensor data analysis accessible to a much broader audience.**
 
+# Table of Contents
+1. [Introduction](## Setup)
+2. [Installation](## Explanations of arguments:)
+
 ## Setup
 1. Install required packages by:
 ```
