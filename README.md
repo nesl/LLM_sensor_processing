@@ -10,8 +10,11 @@ Code to reproduce results in our paper: [SensorBench: Benchmarking LLMs in Codin
 **We envision an intelligent assistant to support users, making advanced sensor data analysis accessible to a much broader audience.**
 
 # Table of Contents
-1. [Introduction](#setup)
-2. [Installation](#run-the-code)
+1. [Setup](#setup)
+2. [Explanations](#explanations-of-arguments)
+3. [Run](#reproduce-experiments-on-the-benchmark)
+4. [Prompts](#plug-in-your-own-prompts)
+5. [Acknowledgements](#acknowledgement)
 
 ## Setup
 1. Install required packages by:
@@ -111,6 +114,29 @@ speech-TelephoneRing2, speech-TelephoneRing3, change_point_detect_1, change_poin
 5. --num_trial: The number of self-verification round. Setting *num_trial* to 1 disable self-verification. In the paper, we select *num_trial* \in {1, 3, 4, 5}
 ```
 --num_trial 5
+```
+
+# Reproduce experiments on the benchmark
+1. Coding with API:
+```
+bash base.bash
+```
+2. CoT:
+```
+bash CoT.bash
+```
+3. ReAct:
+```
+bash ReAct.bash
+```
+4. Self-verification:
+```
+bash self-verification.bash
+```
+5. Run experiments on a single query:
+```
+python cli.py --mode base --query ecg_data-powerline_2 \
+    --openai gpt-4o-mini --index 1 --num_trial 1
 ```
 
 # Plug in your sensor data and query
