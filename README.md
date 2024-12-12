@@ -84,7 +84,7 @@ python cli.py --mode api \
 
         1.2 api: Python conding environment + API access + inspection + ReACT prompting 
 
-        1.3 no_api: Python conding environment + inspection + ReACT prompting 
+        1.3 no_api: Python conding environment only
 
         1.4 CoT:  Python conding environment + API access + Chain of Thought prompting
 
