@@ -11,7 +11,7 @@ Code to reproduce results in our paper: [SensorBench: Benchmarking LLMs in Codin
 
 # Table of Contents
 1. [Introduction](#setup)
-2. [Installation](#setup)
+2. [Installation](#run-the-code)
 
 ## Setup
 1. Install required packages by:
