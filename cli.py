@@ -30,7 +30,7 @@ def main(args):
 
 
     assert args.openai in ('gpt-3.5-turbo', 'gpt-4', 'gpt-4o', 'gpt-4-0125-preview', \
-        'gpt-4-turbo', 
+        'gpt-4-turbo', 'gpt-4o-mini',
         'Llama-2-70b', 'Llama-2-13b', 'Llama-2-7b', 'Llama-3-8b', 'Llama-3-70b', \
         'Qwen1.5-110B', 'Qwen2-72B')
     
@@ -100,6 +100,7 @@ def main(args):
                 openai_key = open("together_key.txt").read().strip()
             else:
                 openai_key = open("key.txt").read().strip()
+                os.environ["OPENAI_API_KEY"] = openai_key
 
             # construct system prompt
             args.system_prompt_file = './sys/system_prompt_signal_processing_'+args.mode+'.txt'

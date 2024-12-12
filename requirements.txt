@@ -13,3 +13,5 @@ librosa
 peft
 pmdarima
 mir_eval
+matplotlib
+httpx==0.27.2
