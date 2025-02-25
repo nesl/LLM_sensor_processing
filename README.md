@@ -107,7 +107,7 @@ python cli.py --mode api \
 --model gpt-4
 ```
 3. --query: The type of signal processing problem you want to solve. These includes: 
-ecg_data-extrapolation, ecg_data-gaussian, ecg_data-heartrate, ecg_data-imputation, ecg_data-motion, ecg_data-powerline_1, ecg_data-powerline_2, ecg_data-powerline_3,  gait-delay_detection, gait-period_detection, ppg-extrapolation, 
+ecg_data-extrapolation, ecg_data-gaussian, ecg_data-heartrate, ecg_data-imputation, ecg_data-motion, ecg_data-powerline_1, ecg_data-powerline_2,  gait-delay_detection, gait-period_detection, ppg-extrapolation, 
 ppg-imputation, resampling, speech-echo, speech-Siren, speech-TelephoneRing1, 
 speech-TelephoneRing2, speech-TelephoneRing3, change_point_detect_1, change_point_detect_2, change_point_detect_3, change_point_detect_4, outlier_detect_1, outlier_detect_2, outlier_detect_3, outlier_detect_4
 ```
