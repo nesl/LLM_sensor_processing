@@ -111,7 +111,7 @@ ecg_data-extrapolation, ecg_data-gaussian, ecg_data-heartrate, ecg_data-imputati
 ppg-imputation, resampling, speech-echo, speech-Siren, speech-TelephoneRing1, 
 speech-TelephoneRing2, speech-TelephoneRing3, change_point_detect_1, change_point_detect_2, change_point_detect_3, change_point_detect_4, outlier_detect_1, outlier_detect_2, outlier_detect_3, outlier_detect_4
 ```
---query filtering_ring
+--query ecg_data-powerline_1
 ``` 
 4. --index: The index of data sample provided for LLMs. *index* \in {1, 2, 3}
 ```
