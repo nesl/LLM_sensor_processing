@@ -174,7 +174,7 @@ def solver(input_data, sampling_rate=None):
 
 Please note that variables input_data and sampling_rate are provided through the function API. Do not simulate them or write code outside the designated function.
 
-2. [IMPORTANT] Specific Interactive Format: State all your output directly. DO NOT put it inside code or with ```. Users will put their queries into the format \\QUERY[text]. For example, \\QUERY[Can you denoise my ECG signal that's corrupted by powerline noise?]. When you finished, state the keyword [SUCCEESS], and the iteration will stop. Output [SUCCEESS] in the chat directly. 
+2. [IMPORTANT] Specific Interactive Format: State all your output directly. DO NOT put it inside code or with ```. Users will put their queries into the format \\QUERY[text]. For example, \\QUERY[Can you denoise my ECG signal that's corrupted by powerline noise?]. When you finished, state the keyword [SUCCESS], and the iteration will stop. Output [SUCCESS] in the chat directly. 
 ````
 
 2. API promt:
@@ -220,7 +220,7 @@ Please note that variables input_data and sampling_rate are provided through the
 
 2. Iterative problem solving: first state the key ideas to answer user's query and solve the problem iteratively (do not over-divide the steps).
 
-3. [IMPORTANT] Specific Interactive Format: State all your output directly. DO NOT put it inside code or with ```. Users will put their queries into the format \\QUERY[text]. For example, \\QUERY[Can you denoise my ECG signal that's corrupted by powerline noise?]. When you finished, state the keyword [SUCCEESS], and the iteration will stop. Output [SUCCEESS] in the chat directly. 
+3. [IMPORTANT] Specific Interactive Format: State all your output directly. DO NOT put it inside code or with ```. Users will put their queries into the format \\QUERY[text]. For example, \\QUERY[Can you denoise my ECG signal that's corrupted by powerline noise?]. When you finished, state the keyword [SUCCESS], and the iteration will stop. Output [SUCCESS] in the chat directly. 
 
 4. [IMPORTANT] Remember, you are a text-based model. You shouldn't inspect visual or listen to audios directly (e.g., write code to visualize them). To understand a signal, you need to interact through text or design methods to learn about the properties.
 
