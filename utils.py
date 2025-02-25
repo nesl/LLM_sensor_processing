@@ -119,12 +119,19 @@ def openai_api(messages, model, temperature=0.2, top_p=0.1, stop=None):
 	trial = 0
 	while not got_result and trial <= 10:
 		try:
-			stream = client.chat.completions.create(
-				model=model,
-				messages=messages,
-				stream=True,
-				max_tokens=2048, 
-				temperature=temperature, top_p=top_p, stop=stop)
+			if model in ('o1', 'o3-mini'):
+				stream = client.chat.completions.create(
+					model=model,
+					messages=messages,
+					stream=True,
+					stop=stop)
+			else:
+				stream = client.chat.completions.create(
+					model=model,
+					messages=messages,
+					stream=True,
+					max_tokens=2048, 
+					temperature=temperature, top_p=top_p, stop=stop)
 			
 			message = ""
 			for chunk in stream:

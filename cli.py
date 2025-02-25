@@ -30,7 +30,7 @@ def main(args):
 
 
     assert args.openai in ('gpt-3.5-turbo', 'gpt-4', 'gpt-4o', 'gpt-4-0125-preview', \
-        'gpt-4-turbo', 'gpt-4o-mini',
+        'gpt-4-turbo', 'gpt-4o-mini', 'o1', 'o3-mini',\
         'Llama-2-70b', 'Llama-2-13b', 'Llama-2-7b', 'Llama-3-8b', 'Llama-3-70b', \
         'Qwen1.5-110B', 'Qwen2-72B')
     
@@ -89,6 +89,7 @@ def main(args):
 
     try:
         if 'gpt-3' in args.openai or 'gpt-4' in args.openai\
+            or 'o1' in args.openai or 'o3-mini' in args.openai\
             or 'Llama' in args.openai or 'Qwen' in args.openai \
                 or 'Mixtral' in args.openai:
             

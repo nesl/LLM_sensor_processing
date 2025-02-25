@@ -58,6 +58,12 @@ echo "YOUR_TOGETHER_AI_TOKEN" >> together_key.txt
 
 ### Prepare Benchmark
 Download the benchmark used in the paper and unzip it in the main folder from [here](https://drive.google.com/file/d/15VA1UQOP9VfR7QTqfLsgkRLSTOKdncA6/view?usp=sharing).
+```
+./
+--/benchmark
+--cli.py
+--...
+```
 
 (Optional) To access the full benchmark, you can view it from [here](https://drive.google.com/file/d/1gVE8_MEk0ZU9ZcspZPhLlO5_L_NQy2Mf/view?usp=sharing).
 

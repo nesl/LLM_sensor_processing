@@ -19,7 +19,7 @@ def solver(input_data, sampling_rate=None):
 
 Please note that variables input_data and sampling_rate are provided through the function API. Do not simulate them or write code outside the designated function.
 
-2. [IMPORTANT] Specific Interactive Format: State all your output directly. DO NOT put it inside code or with ```. Users will put their queries into the format \\QUERY[text]. For example, \\QUERY[Can you denoise my ECG signal that's corrupted by powerline noise?]. When you finished, state the keyword [SUCCEESS], and the iteration will stop. Output [SUCCEESS] in the chat directly. 
+2. [IMPORTANT] Specific Interactive Format: State all your output directly. DO NOT put it inside code or with ```. Users will put their queries into the format \\QUERY[text]. For example, \\QUERY[Can you denoise my ECG signal that's corrupted by powerline noise?]. When you finished, state the keyword [SUCCESS], and the iteration will stop. Output [SUCCESS] in the chat directly. 
 
 """
 
@@ -44,7 +44,7 @@ def solver(input_data, sampling_rate=None):
 
 Please note that variables input_data and sampling_rate are provided through the function API. Do not simulate them or write code outside the designated function.
 
-2. [IMPORTANT] Specific Interactive Format: State all your output directly. DO NOT put it inside code or with ```. Users will put their queries into the format \\QUERY[text]. For example, \\QUERY[Can you denoise my ECG signal that's corrupted by powerline noise?]. When you finished, state the keyword [SUCCEESS], and the iteration will stop. Output [SUCCEESS] in the chat directly. 
+2. [IMPORTANT] Specific Interactive Format: State all your output directly. DO NOT put it inside code or with ```. Users will put their queries into the format \\QUERY[text]. For example, \\QUERY[Can you denoise my ECG signal that's corrupted by powerline noise?]. When you finished, state the keyword [SUCCESS], and the iteration will stop. Output [SUCCESS] in the chat directly. 
 
 3. Iterative problem solving: first state the key ideas to answer user's query and solve the problem step by step (do not over-divide the steps).
 """
@@ -90,7 +90,7 @@ Please note that variables input_data and sampling_rate are provided through the
 
 2. Iterative problem solving: first state the key ideas to answer user's query and solve the problem iteratively (do not over-divide the steps).
 
-3. [IMPORTANT] Specific Interactive Format: State all your output directly. DO NOT put it inside code or with ```. Users will put their queries into the format \\QUERY[text]. For example, \\QUERY[Can you denoise my ECG signal that's corrupted by powerline noise?]. When you finished, state the keyword [SUCCEESS], and the iteration will stop. Output [SUCCEESS] in the chat directly. 
+3. [IMPORTANT] Specific Interactive Format: State all your output directly. DO NOT put it inside code or with ```. Users will put their queries into the format \\QUERY[text]. For example, \\QUERY[Can you denoise my ECG signal that's corrupted by powerline noise?]. When you finished, state the keyword [SUCCESS], and the iteration will stop. Output [SUCCESS] in the chat directly. 
 
 4. [IMPORTANT] Remember, you are a text-based model. You shouldn't inspect visual or listen to audios directly (e.g., write code to visualize them). To understand a signal, you need to interact through text or design methods to learn about the properties.
 
@@ -121,7 +121,7 @@ Please note that variables input_data and sampling_rate are provided through the
 
 2. Iterative problem solving: first state the key ideas to answer user's query and solve the problem iteratively (do not over-divide the steps).
 
-3. [IMPORTANT] Specific Interactive Format: Users will put their queries into the format \\QUERY[text]. For example, \\QUERY[Can you denoise my ECG signal that's corrupted by powerline noise?]. When you finished, state the keyword [SUCCEESS], and the iteration will stop. Output [SUCCEESS] in the chat directly. 
+3. [IMPORTANT] Specific Interactive Format: Users will put their queries into the format \\QUERY[text]. For example, \\QUERY[Can you denoise my ECG signal that's corrupted by powerline noise?]. When you finished, state the keyword [SUCCESS], and the iteration will stop. Output [SUCCESS] in the chat directly. 
 
 4. [IMPORTANT] Use your own implementation: You should implement the functions w/o relying on APIs other than numpy. Do not use scipy.
 
@@ -166,7 +166,7 @@ Your output must follow the following format in your output:
 [Thought]: Based on Observation, you need to think about your next steps in order to complete the instruction.
 [Action]: Based on Thought, you need to write the necessary Python snippet to fulfill the task or obtain observation. Here, you must wait for me to bring the output to you. Once you think the task is completed, put the answer in \\BOXED[] and the iteration will stop.
 
-4. [IMPORTANT] Specific Interactive Format: Users will put their queries into the format \\QUERY[text]. For example, \\QUERY[Can you denoise my ECG signal that's corrupted by powerline noise?]. When you finished, state the keyword [SUCCEESS], and the iteration will stop. Output [SUCCEESS] in the chat directly. 
+4. [IMPORTANT] Specific Interactive Format: Users will put their queries into the format \\QUERY[text]. For example, \\QUERY[Can you denoise my ECG signal that's corrupted by powerline noise?]. When you finished, state the keyword [SUCCESS], and the iteration will stop. Output [SUCCESS] in the chat directly. 
 
 End Goal: Your ultimate goal is to provide independent, accurate, and accessible signal-processing assistance, achieving their objectives efficiently and effectively.
 
