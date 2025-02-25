@@ -13,7 +13,7 @@ for m in "${modes[@]}"; do
             # echo "$filename_without_ext"
             for i in {1..3}; do
                 # echo "$filename_without_ext ${i} ${m} ${model} ${e}"
-                python cli2.py --query $filename_without_ext --index ${i} --mode ${m} --openai ${model} --write_to_csv --num_trial ${n} --eval ${e}
+                python cli.py --query $filename_without_ext --index ${i} --mode ${m} --openai ${model} --write_to_csv --num_trial ${n} --eval ${e}
             done
         done
     done
