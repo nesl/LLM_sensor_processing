@@ -2,7 +2,7 @@
 Code to reproduce results in our paper: [SensorBench: Benchmarking LLMs in Coding-Based Sensor Processing](https://arxiv.org/abs/2410.10741)
 
 # Updates
-[6/28/25] Uploaded DSP finetuning [corpus](https://github.com/nesl/LLM_sensor_processing/finetuned_corpus.json)
+[6/28/25] Uploaded DSP finetuning [corpus](https://github.com/nesl/LLM_sensor_processing/blob/main/finetuned_corpus.json)
 
 # Table of Contents
 1. [Setup](#setup)
