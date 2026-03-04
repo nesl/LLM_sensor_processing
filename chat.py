@@ -263,3 +263,28 @@ def Agent_based_on_text(openai_key: str, system_prompt: str, global_dict, local_
 		agent.save_chat(result=m_mse)
 		return reply
 		
+
+def safe_execution_once(args, reply, global_dict, local_dict, verbose=True):
+	returned_code = extract_code(reply)
+	
+	new_text = re.sub('\n', '', returned_code, flags=re.IGNORECASE)
+	if len(new_text) == 0:
+		output = "No code is detected in the current round!"
+		return output, reply
+	else:
+		# code_to_execute = returned_code
+		code_to_execute =  add_execution_string(args, returned_code, verbose=verbose)
+
+		guardrail_pass, violation = guard_imports(code_to_execute)
+		
+		if not guardrail_pass:
+			output = f"An error occurred: You've intended to use disallowed package: {violation}. Try again"
+			return output, reply
+
+		# input_data, sampling_rate = read_data(args.input_file)
+		output = redirect_stdout(code_to_execute, global_dict, local_dict)
+	if verbose:
+		program_output = iteration_program_output(output)
+	else:
+		program_output = output
+	return program_output, returned_code

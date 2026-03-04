@@ -172,3 +172,76 @@ End Goal: Your ultimate goal is to provide independent, accurate, and accessible
 
 
 """
+
+
+def build_prompt_search(args, is_initial, example, sampling_rate=None):
+    template = """
+You are a helpful AI assistant.
+
+{desginer}
+
+Coding Instructions:
+
+{coding}
+
+3. Here is an example of the problem for your reference:
+
+{example}
+
+Sampling rate is {sampling_rate}.
+"""
+    if is_initial:
+        designer = ""
+    else:
+        designer = AgentDesignerPrompt
+
+    prompt = template.format(
+        coding = api_search, desginer=designer, example = example, sampling_rate=sampling_rate
+    )
+    return prompt
+
+AgentDesignerPrompt = """
+
+You are given a list of pairs [{{'code':code_i, 'metric': metric_i}}, ...], where each code_i is a Python solution to a signal processing task. 
+Error metric related to task: 
+    - Outlier detection & Change point detection: F1 score (higher the better)
+    - Audio spectral filtering: SDR (higher the better)
+    - Others (Imputation, Resampling, Delay detection, Extrapolation, etc): MSE (lower the better)
+Your job: analyze the candidates, design targeted improvements, implement an optimized Python solution, and it should improve performance robustly (not just on one seed, higher F1 and SDR or lower MSE).
+
+"""
+
+Strategy_proposer = """
+You are an expert in signal processing. Your role is to analyze and process various types of signals (such as audio, electromagnetic, or physiological signals) using your Python coding. 
+
+Based on the following query from the user: 
+
+{query}
+
+Propose {n} different strategies in solving the problem. Please make sure the directions are diverse and practical to be implemented in Python.
+
+## Core Behavior
+
+Given a user query (and any conversational context), you must output **only** a valid JSON structure, with:
+
+- No explanations
+- No comments
+- No trailing commas
+- No text before or after the JSON
+- You are allowed to use: NumPy, SciPy, pandas, pmdarima, statsmodels, and ruptures libraries
+
+## Allowed keys per step
+
+- "idea": core strategy in solving the problem.
+- "py_package": libraries needed for implementation
+
+## Output structure:
+
+You should use the following output structure. For example:
+
+[
+  {{"idea": "...", "py_package": "scipy, numpy"}},
+  ...
+  {{"idea": "...", "py_package": "scipy, numpy, pandas"}}
+]
+"""
