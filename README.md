@@ -2,6 +2,10 @@
 Code to reproduce results in our paper: [SensorBench: Benchmarking LLMs in Coding-Based Sensor Processing](https://arxiv.org/abs/2410.10741)
 
 # Updates
+[3/03/26] Apply evolutionary algorithm based search to improve model performance. Command:
+```
+bash search.bash
+```
 [6/28/25] Uploaded DSP finetuning [corpus](https://github.com/nesl/LLM_sensor_processing/blob/main/finetuned_corpus.json)
 
 # Table of Contents
